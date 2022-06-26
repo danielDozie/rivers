@@ -28,8 +28,7 @@ const rotatingText = [
         </div>
 
         <div class="flex flex-col text-white items-center mt-40 cursor-pointer animate-bounce">
-            <!-- <p class="font-[16px] font-thin hover:hidden">click to scroll</p> -->
-            <img src="/downIcon.svg" class="w-10 opacity-60 hover:opacity-100" alt="" />
+            <a href="#about"><img src="/downIcon.svg" class="w-10 opacity-60 hover:opacity-100" alt="" /></a>
         </div>
     </div>
 </div>
