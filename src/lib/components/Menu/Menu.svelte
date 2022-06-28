@@ -17,6 +17,11 @@
         },
         {
             id: 4,
+            name: 'Publications',
+            url: '#publications'
+        },
+        {
+            id: 4,
             name: 'Contact Us',
             url: '#contact'
         }

@@ -14,9 +14,9 @@ let siteTitle = "SustainableRIVERS";
     <link rel="icon" href="./logo.svg">
 </head>
 <body>
-    <div class="w-full h-[100px] bg-white">
+    <div class="hidden w-full h-[100px] bg-white md:inline-block">
         <div class="flex mx-auto pt-8 px-16 justify-between">
-            <img src="/logo.svg" alt="" />
+           <a href="/"><img src="/logo.svg" alt="" /></a>
             <Menu />
             <RegisterButton />
         </div>
