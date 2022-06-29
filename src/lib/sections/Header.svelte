@@ -14,11 +14,18 @@ let siteTitle = "SustainableRIVERS";
     <link rel="icon" href="./logo.svg">
 </head>
 <body>
-    <div class="hidden w-full h-[100px] bg-white md:inline-block">
-        <div class="flex mx-auto pt-8 px-16 justify-between">
+    <div class="w-full h-[80px] md:h-[100px] bg-white md:inline-block fixed z-50 top-0">
+        <div class="hidden md:flex mx-auto pt-8 px-16 justify-between">
            <a href="/"><img src="/logo.svg" alt="" /></a>
             <Menu />
             <RegisterButton />
+        </div>
+            <!-- Mobile Menu -->
+        <div class="flex md:hidden mx-auto pt-4 justify-between px-8">
+           <a href="/"><img src="/logo.svg" alt="" class="drop-shadow-sm w-8 mt-2"/></a>
+           <img src="/menuIcon.svg" alt="" class="drop-shadow-sm h-8 mt-2 cursor-pointer"/>
+           <!-- <img src="/menuicon.svg" alt="" class="drop-shadow-xl"/> -->
+
         </div>
     </div>
 </body>

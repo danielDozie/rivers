@@ -19,7 +19,7 @@
 	</div>
 
 
-    <div class="w-full flex flex-col mx-auto bg-white justify-center items-center text-center">
+    <div class="min-w-full flex flex-col mx-auto bg-white justify-center items-center text-center">
         <img src="/logo.svg" alt="footer logo" class="w-[100px] md:w-[110px] mt-20 md:mt-28"/>
         <div class="w-5/6 md:w-3/5 mx-auto my-4 items-center text-center">
             <h1 class="font-ibmplex text-[26px] md:text-[32px] text-blueDeep/60"><b>Sustainable</b>Rivers</h1>
