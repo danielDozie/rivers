@@ -11,15 +11,14 @@
     let year = date.getFullYear()
 </script>
 
-<div class="w-full h-full flex flex-auto mx-auto justify-center relative" id="contact">
+<div class="w-full h-full flex mx-auto justify-apart" id="contact">
 	<div class="w-[20px] md:w-[150px] inline-block bg-blueDeep/60">
 		<div class="rotate-90 scale-x-flip scale-y-flip sticky top-[50%] mt-[28rem] mb-10">
 			<h1 class="font-ibmplex font-bold text-[72px] text-white/70 invisible md:visible">CONTACT</h1>
 		</div>
 	</div>
-
-
-    <div class="min-w-full flex flex-col mx-auto bg-white justify-center items-center text-center">
+    
+    <div class="w-full flex flex-col mx-auto bg-white justify-center items-center text-center">
         <img src="/logo.svg" alt="footer logo" class="w-[100px] md:w-[110px] mt-20 md:mt-28"/>
         <div class="w-5/6 md:w-3/5 mx-auto my-4 items-center text-center">
             <h1 class="font-ibmplex text-[26px] md:text-[32px] text-blueDeep/60"><b>Sustainable</b>Rivers</h1>
@@ -28,7 +27,7 @@
             <a href="mailto:Info@sustainablerivers.org" id="email"><h1 class="font-ibmplex font-semibold text-[24px] md:text-[32px] mt-12 hover:opacity-70">info@sustainablerivers.org</h1></a>
             <div class="border-b-4 border-blueLighter w-40 md:w-60 mt-2 mx-auto" />
     
-             <div class="font-semibold space-x-2 md:space-x-12 mx-auto mt-20 md:mt-24 pb-2 text-[14px]">
+             <div class="font-semibold space-x-3 md:space-x-12 mx-auto mt-20 md:mt-24 pb-2 text-[13px] md:text-[14px]">
                 {#each menuItem as menu (menu.id)}
                  <a rel="external" href={menu.link} target="_blank">{menu.item}</a>
                 {/each}

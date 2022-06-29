@@ -11,15 +11,15 @@
     ];
 </script>
 
-<div class="w-full h-full flex flex-auto mx-auto justify-center relative " id="event">
+<div class="w-full h-full flex flex-auto mx-auto justify-apart bg-altYellow" id="event">
     <div class="w-[20px] md:w-[150px] inline-block bg-yellow">
         <div class=" rotate-90 scale-x-flip scale-y-flip sticky md:top-[50%] md:mt-[20rem] md:mb-16">
             <h1 class="font-ibmplex font-bold text-[72px] text-white/70 invisible md:visible">EVENTS</h1>
         </div>
     </div>
-    <div class="w-full flex flex-col mx-auto px-4 md:px-16 pb-24 justify-center bg-altYellow">
+    <div class="w-full flex flex-col mx-auto px-4 md:px-16 pb-24 justify-center">
         <div class="">
-            <h1 class="font-hammersmith text-[28px] md:text-[45px] mt-20 mb-8">Timeline <span class="text-blueLight">- Upcoming</span> events.</h1>
+            <h1 class="font-hammersmith text-[24px] md:text-[45px] mt-20 mb-8">Timeline <span class="text-blueLight">- Upcoming</span> events</h1>
             <div>
                 <h1 class="font-ibmplex font-normal text-[18px] md:text-[35px] text-center">ZOOM PLATFORM SESSIONS</h1>
                 <div class=" border-b-2 md:border-b-4 border-blueLighter w-32 md:w-64 mx-auto" />
@@ -38,10 +38,12 @@
                 </div>
                {/each}
            </div>
-        </div>
-        <div>
+           
+           <div class="w-full mt-16">
             <p class="text-center text-[14px] md:text-[16px] font-light md:px-4">This agenda-setting non-partisan vehicle is shaped to steer narrative towards people orientated inclusive growth, climate considerate fiscal interventions, investor focused sustainable development, and economy strengthening polity maturation.</p>
         </div>
+        </div>
+        
     </div>
     
 </div>

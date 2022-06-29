@@ -62,13 +62,13 @@
 
 
 
-<div class="w-full h-full flex flex-auto mx-auto justify-center relative" id="chatroom">
+<div class="w-full h-full flex flex-auto mx-auto justify-apart bg-altBlue" id="chatroom">
 	<div class="w-[20px] md:w-[150px] md:inline-block bg-blueLighter">
 		<div class="rotate-90 scale-x-flip scale-y-flip sticky top-[50%] mt-[28rem] mb-20">
 			<h1 class="font-ibmplex font-bold text-[72px] text-white/70 invisible md:visible">CHATROOM</h1>
 		</div>
 	</div>
-	<div class="w-full flex flex-col mx-auto px-4 md:px-16 pb-20 justify-center bg-altBlue">
+	<div class="w-full flex flex-col mx-auto px-4 md:px-16 pb-20 justify-cente">
 		<div class="">
 			<h1 class="font-hammersmith text-[24px] md:text-[45px] mt-20 mb-8">
 				Chatroom <span class="text-blueLight">- Let’s Share</span> Ideas
@@ -80,7 +80,7 @@
 			<div class="relative flex flex-col justify-center py-6 sm:py-12">
 				<div class="columns-1 md:columns-3 gap-x-4 space-y-4 [column-fill:_balance] box-border mx-auto before:box-inherit after:box-inherit">
 					  {#each comments as comment}
-						<div class="break-inside-avoid font-light md:w-[320px] min-h-48 py-4 px-6 bg-white rounded-[10px] drop-shadow-md border-blueLight/60">
+						<div class="w-[350px] break-inside-avoid font-light md:w-[320px] min-h-48 py-4 px-6 bg-white rounded-[10px] drop-shadow-md border-blueLight/60">
 							<div class="text-[14px] text-blueLight">
 								<p class="font-[500]"><span class="font-[500]">Name ~ </span> {comment.name}</p>
 								<p><span class="font-[500]">Email ~ </span> {comment.email.replace(/^(.)(.*)(.@.*)$/,
@@ -104,7 +104,7 @@
 			</div>
 
 			<div class="flex justify-center items-center text-center">
-				<div class="w-[700px] py-12 px-6 bg-white rounded-[10px] border my-16 border-blueLight/20">
+				<div class="w-[450px] md:w-[700px] py-12 px-6 bg-white rounded-[10px] border my-16 border-blueLight/20">
 					<div class="flex flex-col text-[14px] text-blueLight gap-y-[20px] w-full md:w-[80%] mx-auto">
 						<input
 							type="text"
