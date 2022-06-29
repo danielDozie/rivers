@@ -8,7 +8,7 @@ const rotatingText = [
 ];
 </script>
 
-<div class="w-full h-[650px] bg-[url('/hero.png')] bg-cover ">
+<div class="w-full h-[650px] bg-[url('/hero.png')] bg-cover mt-20">
     <div class="w-full flex flex-col h-[650px] bg-blueDeep/60 absolute mx-auto justify-center">
         <div class="justify-center items-center text-center mt-24">
             <h1 class="font-ibmplex font-bold text-white text-[38px] md:text-[75px]">Sustainable<span class="font-light">RIVERS</span></h1>
