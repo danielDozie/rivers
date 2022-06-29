@@ -11,7 +11,7 @@
     ];
 </script>
 
-<div class="w-full h-full flex flex-auto mx-auto justify-apart bg-altYellow" id="event">
+<div class="w-full h-full flex mx-auto bg-altYellow" id="event">
     <div class="w-[20px] md:w-[150px] inline-block bg-yellow">
         <div class=" rotate-90 scale-x-flip scale-y-flip sticky md:top-[50%] md:mt-[20rem] md:mb-16">
             <h1 class="font-ibmplex font-bold text-[72px] text-white/70 invisible md:visible">EVENTS</h1>
@@ -28,12 +28,12 @@
                 <p class="font-ibmplex text-[16px] md:text-[30px] font-normal">Sundays 1600hrs - 1800hrs GMT<sup class="font-bold text-2xl md:text-5xl absolute -mt-1 md:mt-2 text-yellow animate-pulse">.</sup></p>
             </div>
         </div>
-
+        
        
         <div class="w-5/6 md:w-[80%] mx-auto my-12 md:my-16">
            <div class="flex flex-wrap gap-4 md:gap-8 justify-center items-center">
                {#each events as event}
-                <div class="w-[400px] md:w-[350px] h-[60px] md:h-[80px] bg-white rounded-[10px]">
+                <div class="w-[350px] md:w-[350px] h-[60px] md:h-[80px] bg-white rounded-[10px]">
                     <p class="text-center mt-3 md:mt-4 text-[20px] md:text-[30px]">{event.date}</p>
                 </div>
                {/each}
@@ -41,8 +41,10 @@
            
            <div class="w-full mt-16">
             <p class="text-center text-[14px] md:text-[16px] font-light md:px-4">This agenda-setting non-partisan vehicle is shaped to steer narrative towards people orientated inclusive growth, climate considerate fiscal interventions, investor focused sustainable development, and economy strengthening polity maturation.</p>
+            </div>
         </div>
-        </div>
+        
+
         
     </div>
     

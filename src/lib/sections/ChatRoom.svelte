@@ -130,11 +130,11 @@
 				</div>
 			</div>
 
-			<div class="text-[22px] md:text-[28px] pb-20">
+			<div class="text-[20px] md:text-[22px] pb-20">
 				<p class="font-hammersmith">Need more information?</p>
-				<p class="font-ibmplex text-[22px] md:text-[28px]">
+				<p class="font-ibmplex text-[20px] md:text-[22px]">
 					Reach out to us. We would really love to hear from you.<br />
-					<span class="text-blueLighter font-light underline underline-offset-4 decoration-[3px] decoration-blueLighter text-[22px] md:text-[28px]"
+					<span class="text-blueLighter font-light underline underline-offset-4 decoration-[3px] decoration-blueLighter text-[20px] md:text-[22px]"
 						>Use the email below. 
 					</span>
 					<a href="#email"

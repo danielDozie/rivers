@@ -27,9 +27,9 @@
             <a href="mailto:Info@sustainablerivers.org" id="email"><h1 class="font-ibmplex font-semibold text-[24px] md:text-[32px] mt-12 hover:opacity-70">info@sustainablerivers.org</h1></a>
             <div class="border-b-4 border-blueLighter w-40 md:w-60 mt-2 mx-auto" />
     
-             <div class="font-semibold space-x-3 md:space-x-12 mx-auto mt-20 md:mt-24 pb-2 text-[13px] md:text-[14px]">
+             <div class="font-semibold space-x-4 md:space-x-12 mx-auto mt-20 md:mt-24 pb-2 text-[13px] md:text-[14px">
                 {#each menuItem as menu (menu.id)}
-                 <a rel="external" href={menu.link} target="_blank">{menu.item}</a>
+                 <a rel="external" href={menu.link} target="_blank" class="hover:text-yellow">{menu.item}</a>
                 {/each}
              </div>
             <p class="font-light text-[14px] my-4">Copyright &copy; {year} <span class="font-semibold">Substainable</span>Rivers. All rights reserved.</p>
