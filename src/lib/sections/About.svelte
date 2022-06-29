@@ -4,7 +4,7 @@
     import AboutButton from '$lib/components/Button/AboutButton.svelte'
 </script>
 
-<div class="w-full h-full flex flex-auto mx-auto justify-center relative" id="about">
+<div class="w-full h-full flex flex-row mx-auto justify-apart bg-yellow" id="about">
     <div class="w-[20px] md:w-[150px] inline-block bg-blueLight">
         <div class="rotate-90 scale-x-flip scale-y-flip sticky top-[50%] mt-[20rem] mb-20">
             <h1 class="font-ibmplex font-bold text-[72px] text-white/70 invisible md:visible">ABOUT</h1>
@@ -18,7 +18,7 @@
         </div>
 
         <div class="w-full flex mx-auto justify-center">
-            <div class="w-[700px] h-[250px] bg-blueLight bg-[url('/phroad.jpg')] bg-cover bg-center rounded-[10px] mt-12 z-20 relative justify-center">
+            <div class="w-[360px] md:w-[700px] h-[250px] bg-blueLight bg-[url('/phroad.jpg')] mx-auto bg-cover bg-center rounded-[10px] mt-12 z-20 relative justify-center">
                 <div class="w-full h-[90px] bottom-0 bg-blueLight/70 absolute rounded-b-[10px]">
                     <div class="text-white text-[14px] mx-8 my-6">
                         <p>Porthacourt City</p>

@@ -43,13 +43,13 @@
 	];
 </script>
 
-<div class="w-full h-full flex flex-auto mx-auto justify-center relative" id="publications">
+<div class="w-full h-full flex flex-auto mx-auto justify-apart bg-[#D4DEEB]/60" id="publications">
 	<div class="w-[20px] md:w-[150px] md:inline-block bg-blueDeep">
 		<div class="rotate-90 scale-x-flip scale-y-flip sticky top-[50%] mt-[36rem] mb-20">
 			<h1 class="font-ibmplex font-bold text-[72px] text-white/70 invisible md:visible">PUBLICATIONS</h1>
 		</div>
 	</div>
-	<div class="min-w-full relative mx-auto px-4 md:px-16 pb-20 justify-center bg-[#D4DEEB]/60">
+	<div class="w-full mx-auto px-4 md:px-16 pb-20 justify-center ">
         
         <div class="">
 			<h1 class="font-hammersmith text-[28px] md:text-[45px] mt-20 mb-8 leading-0">
@@ -57,11 +57,10 @@
 			</h1>
 		</div>
         
-        <div class="w-full flex flex-wrap mx-auto gap-4">
+        <div class="w-full flex flex-wrap mx-auto justify-center gap-4">
             {#each posts as post}
             <div class="w-full md:w-[320px] h-[220px] relative"> 
-                <!-- svelte-ignore a11y-img-redundant-alt -->
-                <img src={post.image} alt="publication-image" class="w-full h-full rounded-[10px]"/>
+                <img src={post.image} alt="publication" class="w-full h-full rounded-[10px]"/>
                 <div class="w-full h-28 bottom-0 rounded-b-[10px] hover:rounded-b-[10px] bg-blueDeep/70 absolute hover:bg-blueDeep"> 
                     <div class="w-[90%] flex flex-col cursor-pointer">
                         <h1 class="font-ibmplex font-light italic text-[14px] ml-4 mt-4 text-white/80">
