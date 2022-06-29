@@ -104,7 +104,7 @@
 			</div>
 
 			<div class="flex justify-center items-center text-center">
-				<div class="w-[450px] md:w-[700px] py-12 px-6 bg-white rounded-[10px] border my-16 border-blueLight/20">
+				<div class="w-[350px] md:w-[700px] py-12 px-6 bg-white rounded-[10px] border my-16 border-blueLight/20">
 					<div class="flex flex-col text-[14px] text-blueLight gap-y-[20px] w-full md:w-[80%] mx-auto">
 						<input
 							type="text"
@@ -129,18 +129,20 @@
 					</div>
 				</div>
 			</div>
+
+			<div class="text-[22px] md:text-[28px] pb-20">
+				<p class="font-hammersmith">Need more information?</p>
+				<p class="font-ibmplex text-[22px] md:text-[28px]">
+					Reach out to us. We would really love to hear from you.<br />
+					<span class="text-blueLighter font-light underline underline-offset-4 decoration-[3px] decoration-blueLighter text-[22px] md:text-[28px]"
+						>Use the email below. 
+					</span>
+					<a href="#email"
+							><span class="text-blueDeep cursor-pointer animate-bounce">&darr</span></a
+						>
+				</p>
+			</div>
 		</div>
-		<div class="text-[22px] md:text-[28px] pb-20">
-			<p class="font-hammersmith">Need more information?</p>
-			<p class="font-ibmplex text-[22px] md:text-[28px]">
-				Reach out to us. We would really love to hear from you.<br />
-				<span class="text-blueLighter font-light underline underline-offset-4 decoration-[3px] decoration-blueLighter text-[22px] md:text-[28px]"
-					>Use the email below. 
-				</span>
-                <a href="#email"
-						><span class="text-blueDeep cursor-pointer animate-bounce">&darr</span></a
-					>
-			</p>
-		</div>
+		
 	</div>
 </div>
