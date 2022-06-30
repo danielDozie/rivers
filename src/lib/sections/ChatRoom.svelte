@@ -1,5 +1,7 @@
+
 <script>
-	$:
+
+$:
 	comments = [
 		{
 			name: 'Chidozie Danie',
@@ -144,6 +146,5 @@
 				</p>
 			</div>
 		</div>
-		
 	</div>
 </div>

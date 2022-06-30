@@ -3,8 +3,8 @@
 	import Menu from '$lib/components/Menu/Menu.svelte';
 	let siteTitle = 'SustainableRIVERS';
 	import {mobileMenuStore} from '$lib/store.svelte'
-	import MenuOpenIcon from '$lib/components/Others/menuOpenIcon.svelte'
-	import MenuCloseIcon from '$lib/components/Others/menuCloseIcon.svelte'
+	import MenuOpenIcon from '$lib/components/Others/MenuOpenIcon.svelte'
+	import MenuCloseIcon from '$lib/components/Others/MenuCloseIcon.svelte'
 	
 </script>
 
