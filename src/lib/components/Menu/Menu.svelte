@@ -1,9 +1,9 @@
 <script>
 	import {toggleMenu} from '$lib/components/Others/Toggle.svelte';
 
-    import { page } from '$app/stores';
-    let path;
-    $: path = $page.url.href;
+    // import { page } from '$app/stores';
+    // let path;
+    // $: path = $page.url.href;
     
     export const menuItem = [
         {
@@ -27,7 +27,7 @@
             url: '#publications'
         },
         {
-            id: 4,
+            id: 5,
             name: 'Contact Us',
             url: '#contact'
         }
@@ -38,7 +38,8 @@
     {#each menuItem as menu}
     <a href={menu.url}><li class="active:text-blueLighter" on:click={toggleMenu}>
         {menu.name.toLocaleUpperCase()}
-    </li><div class="w-12 md:w-full h-2 bg-yellow -mt-3 -ml-1 md:-ml-2" /></a>
+    </li>
+    <!-- <div class="w-12 md:w-full h-2 bg-yellow -mt-3 -ml-1 md:-ml-2" /> -->
+</a>
     {/each}
-{console.log("current path:", path)}
 </ul>

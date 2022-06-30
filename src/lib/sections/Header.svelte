@@ -5,7 +5,6 @@
 	import {mobileMenuStore} from '$lib/store.svelte'
 	import MenuOpenIcon from '$lib/components/Others/MenuOpenIcon.svelte'
 	import MenuCloseIcon from '$lib/components/Others/MenuCloseIcon.svelte'
-	
 </script>
 
 <svelte:head>
@@ -26,13 +25,13 @@
 	<div class="flex md:hidden mx-auto pt-4 justify-between px-4">
 		<a href="/"><img src="/logo.svg" alt="" class="drop-shadow-sm w-8 mt-2" /></a>
 		{#if $mobileMenuStore}
-		<MenuCloseIcon />
-		{:else}
 		<MenuOpenIcon />
+		{:else}
+		<MenuCloseIcon />
 		{/if}
 	</div>
 	<!-- Off canvas mobile menu -->
-	<div class={`${$mobileMenuStore ? 'hidden' : 'flex'} w-full h-screen md:hidden bg-black/50 mx-auto mt-6 relative`}>
+	<div class={`${!$mobileMenuStore ? 'hidden' : 'flex'} w-full h-screen md:hidden bg-black/50 mx-auto mt-6 relative`}>
 		<div class="w-3/5 h-full bg-white pt-4">
 			<div class="flex flex-col mx-auto px-12">
 				<h1 class="text-[24px] text-black/80">NAVIGATION</h1>
