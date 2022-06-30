@@ -1,5 +1,7 @@
 <script>
 	import {toggleMenu} from '$lib/components/Others/Toggle.svelte';
+    import { page } from '$app/stores';
+
 
     // import { page } from '$app/stores';
     // let path;
@@ -36,10 +38,21 @@
 
 <ul class="flex flex-col gap-y-8 pt-12 uppercase font-hammersmith text-[16px] text-black/80 md:flex-row md:flex md:gap-x-8 md:pt-3 md:gap-y-0 md:text-blueDeep md:text-['18px'] md:font-hammersmith ">
     {#each menuItem as menu}
-    <a href={menu.url}><li class="active:text-blueLighter" on:click={toggleMenu}>
+    <a href={menu.url} class:active="{$page.url.hash === menu.url}"><li on:click={toggleMenu} class="hover:underline underline-offset-4 decoration-yellow decoration-[10px]">
         {menu.name.toLocaleUpperCase()}
     </li>
     <!-- <div class="w-12 md:w-full h-2 bg-yellow -mt-3 -ml-1 md:-ml-2" /> -->
 </a>
     {/each}
 </ul>
+<!--  -->
+
+<style>
+a.active {
+  text-decoration: underline;
+  text-decoration-color: #FDB44B;
+  text-decoration-thickness: 10px;
+  text-underline-offset: 4px;
+  text-underline-position: auto;
+}
+</style>
