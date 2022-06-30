@@ -1,4 +1,5 @@
 <script>
+	import {toggleMenu} from '$lib/components/Others/MenuToggle.svelte';
     export const menuItem = [
         {
             id: 1,
@@ -27,11 +28,11 @@
         }
     ];
 </script>
-<ul class="flex gap-x-8 pt-3">
+<ul class="flex flex-col gap-y-8 pt-12 uppercase font-hammersmith text-[16px] text-black/80 md:flex-row md:flex md:gap-x-8 md:pt-3 md:gap-y-0 md:text-blueDeep md:text-['18px'] md:font-hammersmith">
     {#each menuItem as menu}
-    <a href={menu.url}><li class="text-blueDeep text-['18px'] font-hammersmith">
+    <a href={menu.url}><li class="" on:click={toggleMenu}>
         {menu.name.toLocaleUpperCase()}
-    </li><div class="w-full h-2 bg-yellow -mt-3 -ml-2" /></a>
+    </li><div class="w-12 md:w-full h-2 bg-yellow -mt-3 -ml-1 md:-ml-2" /></a>
     {/each}
 
 </ul>
