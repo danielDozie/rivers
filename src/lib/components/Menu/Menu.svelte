@@ -1,5 +1,5 @@
 <script>
-	import {toggleMenu} from '$lib/components/Others/MenuToggle.svelte';
+	import {toggleMenu} from '$lib/components/Others/Toggle.svelte';
     export const menuItem = [
         {
             id: 1,

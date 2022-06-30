@@ -3,7 +3,7 @@
 	import Menu from '$lib/components/Menu/Menu.svelte';
 	let siteTitle = 'SustainableRIVERS';
 	import {mobileMenuStore} from '$lib/store.svelte'
-	import {toggleMenu} from '$lib/components/Others/MenuToggle.svelte';
+	import {toggleMenu} from '$lib/components/Others/Toggle.svelte';
 </script>
 
 <svelte:head>
