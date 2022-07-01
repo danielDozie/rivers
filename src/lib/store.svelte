@@ -10,4 +10,12 @@ export const mobileMenuStore = (() => {
     menuToggle: () => update(props => props = !props),
   }
 })();
+
+export const readMoreStore = (() => {
+  const {subscribe, set, update} = writable(false);
+  return {
+    subscribe,
+    readMoreToggle: () => update(props => props = !props)
+  }
+})();
 </script>

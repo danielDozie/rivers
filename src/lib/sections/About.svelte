@@ -2,6 +2,7 @@
     // your script goes here
     import Concept from '$lib/content/concept.svelte'
     import AboutButton from '$lib/components/Button/AboutButton.svelte'
+
 </script>
 
 <div class="w-full h-full flex flex-row mx-auto justify-apart bg-white" id="about">
@@ -27,8 +28,8 @@
                 </div>
             </div>
         </div>
-
-        <div class="text-[16px] font-light my-16 space-y-8">
+        
+        <div class="text-[16px] font-light">
             <!-- about page write ups -->
             <Concept />
         </div>
