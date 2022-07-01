@@ -11,6 +11,7 @@ module.exports = {
       'altBlue': '#F5FDFF',
       'yellow': '#FDB44B',
       'altYellow': '#FFF5E6',
+      'green': '#7ED957',
     },
     extend:{
       scale: {

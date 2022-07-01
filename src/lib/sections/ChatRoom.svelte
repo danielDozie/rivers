@@ -1,5 +1,6 @@
 
 <script>
+	import { scrollto } from "svelte-scrollto";
 
 $:
 	comments = [
@@ -82,7 +83,7 @@ $:
 			<div class="relative flex flex-col justify-center py-6 sm:py-12">
 				<div class="columns-1 md:columns-3 gap-x-4 space-y-4 [column-fill:_balance] box-border mx-auto before:box-inherit after:box-inherit">
 					  {#each comments as comment}
-						<div class="w-[350px] break-inside-avoid font-light md:w-[320px] min-h-48 py-4 px-6 bg-white rounded-[10px] drop-shadow-md border-blueLight/60">
+						<div class="w-[350px] break-inside-avoid font-light md:w-[320px] min-h-48 py-4 px-6 bg-white rounded-[10px] drop-shadow-md border-blueLight/60 hvr-float">
 							<div class="text-[14px] text-blueLight">
 								<p class="font-[500]"><span class="font-[500]">Name ~ </span> {comment.name}</p>
 								<p><span class="font-[500]">Email ~ </span> {comment.email.replace(/^(.)(.*)(.@.*)$/,
@@ -99,46 +100,25 @@ $:
 				
 			<div class="flex justify-center">
 				<p
-					class="font-hammersmith text-[14px] text-blueLight cursor-pointer hover:underline hover:decoration-blueLight hover:underline-offset-4 decoration-2 drop-shadow-lg"
+					class="font-hammersmith text-[14px] text-blueLight cursor-pointer hover:underline hover:decoration-blueLight hover:underline-offset-4 decoration-2 drop-shadow-lg hvr-wobble-horizontal"
 				>
 					Load more comments
 				</p>
 			</div>
-
-			<div class="flex justify-center items-center text-center">
-				<div class="w-[350px] md:w-[700px] py-12 px-6 bg-white rounded-[10px] border my-16 border-blueLight/20">
-					<div class="flex flex-col text-[14px] text-blueLight gap-y-[20px] w-full md:w-[80%] mx-auto">
-						<input
-							type="text"
-							name=""
-							placeholder="Full Name"
-							class="py-4 px-8 bg-blueDeep/10 rounded-[10px]"
-						/>
-						<input
-							type="email"
-							name=""
-							id=""
-							placeholder="Email Address (Will be verified)"
-							class="py-4 px-8 bg-blueDeep/10 rounded-[10px]"
-						/>
-						<textarea
-							placeholder="Your Comment"
-							class="h-32 py-4 px-8 bg-blueDeep/10 rounded-[10px] resize"
-						/>
-						<button class="py-4 px-8 bg-blueLight mt-6 rounded-[10px] text-white"
-							>COMMENT/JOIN US</button
+			
+			<div class="flex justify-center pt-4 pb-20 ">
+				<button class="py-4 px-8 bg-blueLight mt-6 rounded-[10px] text-white hvr-sweep-to-right"
+							>ADD COMMENT/JOIN US</button
 						>
-					</div>
-				</div>
 			</div>
 
 			<div class="text-[20px] md:text-[22px] pb-20">
 				<p class="font-hammersmith">Need more information?</p>
-				<p class="font-ibmplex text-[20px] md:text-[22px]">
+				<p class="font-ibmplex text-[20px] md:text-[22px] hvr-wobble-horizontal">
 					Reach out to us. We would really love to hear from you.<br />
-					<a href="#email"
+					<a href="#email" use:scrollto={'#email'}
 					>
-					<span class="text-blueLighter font-light underline underline-offset-4 decoration-[3px] decoration-blueLighter text-[20px] md:text-[22px]"
+					<span class="text-blueLighter font-light underline underline-offset-4 decoration-[3px] decoration-blueLighter text-[20px] md:text-[22px] "
 						>Use the email below. 
 					</span>
 					<span class="text-blueDeep cursor-pointer animate-bounce">&darr</span></a

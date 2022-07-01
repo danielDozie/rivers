@@ -59,7 +59,7 @@
         
         <div class="w-full flex flex-wrap mx-auto justify-center gap-4">
             {#each posts as post}
-            <div class="w-full md:w-[320px] h-[220px] relative"> 
+            <div class="w-full md:w-[320px] h-[220px] relative hvr-float"> 
                 <img src={post.image} alt="publication" class="w-full h-full rounded-[10px]"/>
                 <div class="w-full h-28 bottom-0 rounded-b-[10px] hover:rounded-b-[10px] bg-blueDeep/70 absolute hover:bg-blueDeep"> 
                     <div class="w-[90%] flex flex-col cursor-pointer">
