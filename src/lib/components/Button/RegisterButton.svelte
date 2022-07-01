@@ -7,7 +7,7 @@
 	</a>
 	<a href="/" class="">
 		<button
-			class="font-hammersmith rounded-[10px] text-[16px] text-blueDeep md:text-white md:bg-blueDeep md:px-8 md:py-2 drop-shadow-lg md:drop-shadow-none md:uppercase md:no-underline underline underline-offset-4 decoration-4"
+			class="font-hammersmith rounded-[10px] text-[16px] text-blueDeep md:text-white md:bg-green md:px-8 md:py-2 drop-shadow-lg md:drop-shadow-none md:uppercase md:no-underline underline underline-offset-4 decoration-4"
 			on:click={toggleMenu}>Register</button
 		>
 	</a>

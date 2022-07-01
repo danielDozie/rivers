@@ -18,7 +18,7 @@
         </div>
 
         <div class="w-full flex mx-auto justify-center">
-            <div class="w-[360px] md:w-[700px] h-[250px] bg-blueLight bg-[url('/phroad.jpg')] mx-auto bg-cover bg-center rounded-[10px] mt-12 z-20 relative justify-center">
+            <div class="w-[360px] md:w-[700px] h-[250px] bg-blueLight bg-[url('/phroad.jpg')] mx-auto bg-cover bg-center rounded-[10px] mt-12 z-20 relative justify-center drop-shadow-xl">
                 <div class="w-full h-[90px] bottom-0 bg-blueLight/70 absolute rounded-b-[10px]">
                     <div class="text-white text-[14px] mx-8 my-6">
                         <p>Porthacourt City</p>
