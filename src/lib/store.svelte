@@ -26,4 +26,13 @@ export const clients = (() => {
     updateClients: () => update(props => props = props)
   }
 })();
+
+export const formDialog = (() => {
+  const {subscribe, set, update} = writable(false);
+
+  return {
+    subscribe,
+    showForm: () => update(props => props = !props)
+  }
+})();
 </script>
