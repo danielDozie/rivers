@@ -1,4 +1,22 @@
 <script>
+import ClientLogo from "../components/Others/ClientLogo.svelte";
+
+    let ResearchVolunteerData = [
+        {name: "/logos/1.svg"},
+        {name: "/logos/2.svg"},
+        {name: "/logos/3.svg"},
+        {name: "/logos/4.svg"},
+        {name: "/logos/5.svg"},
+        {name: "/logos/6.svg"},
+        {name: "/logos/7.svg"},
+        {name: "/logos/8.svg"},
+        {name: "/logos/9.svg"},
+        {name: "/logos/10.svg"},
+        {name: "/logos/11.svg"},
+        {name: "/logos/12.svg"},
+    ]
+    
+    
     let menuItem = [
         {id: 1, item: "Facebook", link: "www.facebook.com"},
         {id: 2, item: "Twitter", link: "www.twitter.com"},
@@ -6,9 +24,15 @@
         {id: 4, item: "Linkedin", link: "www.linkedin.com"},
         {id: 5, item: "Tiktok", link: "www.tiktok.com"}
     ];
-    
     let date = new Date();
     let year = date.getFullYear()
+
+    let footerPoint = [
+        {name: "Research Volunteer", url: "#research-volunteer"},
+        {name: "Operational Volunteer", url: "#operational-volunteer"},
+        {name: "Sponsors/Partners", url: "#sponsors"}
+    ];
+    
 </script>
 
 <div class="w-full h-full flex mx-auto justify-apart" id="contact">
@@ -18,8 +42,19 @@
 		</div>
 	</div>
     
-    <div class="w-full flex flex-col mx-auto bg-white justify-center items-center text-center">
-        <img src="/subRiverLogo.svg" alt="footer logo" class="w-[60px] md:w-[80px] mt-20 md:mt-28"/>
+    <div class="w-full flex flex-col mx-auto justify-center items-center text-center">
+        <div class="flex flex-wrap pt-20 justify-center items-center text-center gap-4 md:gap-0 md:space-x-8">
+            {#each footerPoint as point}
+            <div class="bg-white shadow-lg rounded-[10px] text-blueDeep/70 text-sm font-normal mx-auto px-4 py-3 border border-green hvr-shutter-out-horizontal cursor-pointer">
+                <a href={point.url}>{point.name}</a>
+            </div>
+            {/each}
+        </div>
+        <ClientLogo logos={ResearchVolunteerData} />
+
+        <div class="border border-b w-[50%] border-blueDeep/20 my-20" />
+        
+        <img src="/subRiverLogo.svg" alt="footer logo" class="w-[60px] md:w-[80px] "/>
         <div class="w-5/6 md:w-3/5 mx-auto my-4 items-center text-center">
             <h1 class="font-ibmplex text-[26px] md:text-[32px] text-blueDeep/60"><b>Sustainable</b>Rivers</h1>
             <p class="font-ibmplex text-[16px] md:text-[18px] font-light my-4"><span class="font-bold">Sustanable</span>Rivers initiative is a platform that seeks to understand the past, particularly as it lays foundation for what evolved into today; review the present against a series of developmental barometers; with an informed outlook into the future in economic, social, and political terms amongst others.</p>
@@ -38,3 +73,9 @@
 </div>
 
 
+<style>
+    .hvr-shutter-out-horizontal::before {
+      background: #7ED957;
+      border-radius: 10px;
+    }
+ </style>

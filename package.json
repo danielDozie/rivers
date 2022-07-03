@@ -29,7 +29,6 @@
 	"type": "module",
 	"dependencies": {
 		"hover.css": "^2.3.2",
-		"svelte-scrollto": "^0.2.0",
 		"swiper": "^8.2.6"
 	}
 }
