@@ -18,4 +18,12 @@ export const readMoreStore = (() => {
     readMoreToggle: () => update(props => props = !props)
   }
 })();
+
+export const clients = (() => {
+  const { subscribe, set, update}  = writable([]);
+  return {
+    subscribe,
+    updateClients: () => update(props => props = props)
+  }
+})();
 </script>

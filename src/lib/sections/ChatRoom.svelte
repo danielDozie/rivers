@@ -1,7 +1,5 @@
 
 <script>
-	import { scrollto } from "svelte-scrollto";
-
 $:
 	comments = [
 		{
@@ -83,7 +81,7 @@ $:
 			<div class="relative flex flex-col justify-center py-6 sm:py-12">
 				<div class="columns-1 md:columns-3 gap-x-4 space-y-4 [column-fill:_balance] box-border mx-auto before:box-inherit after:box-inherit">
 					  {#each comments as comment}
-						<div class="w-[350px] break-inside-avoid font-light md:w-[320px] min-h-48 py-4 px-6 bg-white rounded-[10px] drop-shadow-md border-blueLight/60 hvr-float">
+						<div class="w-[350px] break-inside-avoid font-light md:w-full min-h-48 py-4 px-6 bg-white rounded-[10px] drop-shadow-md border-blueLight/60 hvr-float">
 							<div class="text-[14px] text-blueLight">
 								<p class="font-[500]"><span class="font-[500]">Name ~ </span> {comment.name}</p>
 								<p><span class="font-[500]">Email ~ </span> {comment.email.replace(/^(.)(.*)(.@.*)$/,
@@ -116,7 +114,7 @@ $:
 				<p class="font-hammersmith">Need more information?</p>
 				<p class="font-ibmplex text-[20px] md:text-[22px] hvr-wobble-horizontal">
 					Reach out to us. We would really love to hear from you.<br />
-					<a href="#email" use:scrollto={'#email'}
+					<a href="#email"
 					>
 					<span class="text-blueLighter font-light underline underline-offset-4 decoration-[3px] decoration-blueLighter text-[20px] md:text-[22px] "
 						>Use the email below. 
