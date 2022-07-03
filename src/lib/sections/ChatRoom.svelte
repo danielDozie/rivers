@@ -1,62 +1,68 @@
 
-<script>
-$:
-	comments = [
-		{
-			name: 'Chidozie Danie',
-			email: 'placmedia@gmail.com',
-			comment:
-				'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et'
-		},
-		{
-			name: 'Ariana Grande',
-			email: 'aryraymond@yahoo.com',
-			comment:
-				'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.'
-		},
-		{
-			name: 'John .K. Wike',
-			email: 'justice_wike@gmail.com',
-			comment:
-				'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.'
-		},
-		{
-			name: 'Ariana Grande',
-			email: 'aryraymond@yahoo.com',
-			comment:
-				'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.'
-		},
-		{
-			name: 'John .K. Wike',
-			email: 'justice_wike@gmail.com',
-			comment:
-				'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.'
-		},
-		{
-			name: 'Chidozie Danie',
-			email: 'placmedia@gmail.com',
-			comment:
-				'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et'
-		},
-		{
-			name: 'Ariana Grande',
-			email: 'aryraymond@yahoo.com',
-			comment:
-				'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.'
-		},
-		{
-			name: 'John .K. Wike',
-			email: 'justice_wike@gmail.com',
-			comment:
-				'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.'
-		},
-		{
-			name: 'Ariana Grande',
-			email: 'aryraymond@yahoo.com',
-			comment:
-				'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.'
-		}
-	];
+<script context="module">
+	import CommentForm from '$lib/components/Forms/CommentForm.svelte';
+	import {formDialog} from '$lib/store.svelte'
+
+	export const toggleForm = () =>{
+		formDialog.showForm();
+	}
+	
+	let comments = [
+			{
+				name: 'Chidozie Danie',
+				email: 'placmedia@gmail.com',
+				comment:
+					'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et'
+			},
+			{
+				name: 'Ariana Grande',
+				email: 'aryraymond@yahoo.com',
+				comment:
+					'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.'
+			},
+			{
+				name: 'John .K. Wike',
+				email: 'justice_wike@gmail.com',
+				comment:
+					'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.'
+			},
+			{
+				name: 'Ariana Grande',
+				email: 'aryraymond@yahoo.com',
+				comment:
+					'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.'
+			},
+			{
+				name: 'John .K. Wike',
+				email: 'justice_wike@gmail.com',
+				comment:
+					'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.'
+			},
+			{
+				name: 'Chidozie Danie',
+				email: 'placmedia@gmail.com',
+				comment:
+					'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et'
+			},
+			{
+				name: 'Ariana Grande',
+				email: 'aryraymond@yahoo.com',
+				comment:
+					'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.'
+			},
+			{
+				name: 'John .K. Wike',
+				email: 'justice_wike@gmail.com',
+				comment:
+					'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.'
+			},
+			{
+				name: 'Ariana Grande',
+				email: 'aryraymond@yahoo.com',
+				comment:
+					'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.'
+			}
+		];
 
 
 </script>
@@ -98,17 +104,20 @@ $:
 				
 			<div class="flex justify-center">
 				<p
-					class="font-hammersmith text-[14px] text-blueLight cursor-pointer hover:underline hover:decoration-blueLight hover:underline-offset-4 decoration-2 drop-shadow-lg hvr-wobble-horizontal"
-				>
+					class="font-hammersmith text-[14px] text-blueLight cursor-pointer hover:underline hover:decoration-blueLight hover:underline-offset-4 decoration-2 drop-shadow-lg hvr-wobble-horizontal">
 					Load more comments
 				</p>
 			</div>
-			
+			{#if $formDialog}
+				<CommentForm />
+			{/if}
 			<div class="flex justify-center pt-4 pb-20 ">
-				<button class="py-4 px-8 bg-blueLight mt-6 rounded-[10px] text-white hvr-sweep-to-right"
-							>ADD COMMENT/JOIN US</button
+				<button class={`${$formDialog ? "hidden" : ""} py-3 px-8 bg-blueLight mt-6 rounded-[10px] text-white hvr-sweep-to-right`}
+				on:click={toggleForm}>ADD COMMENT/JOIN US</button
 						>
 			</div>
+
+			
 
 			<div class="text-[20px] md:text-[22px] pb-20">
 				<p class="font-hammersmith">Need more information?</p>
