@@ -1,19 +1,20 @@
 <script>
 import ClientLogo from "../components/Others/ClientLogo.svelte";
+    import {page} from "$app/stores"
 
     let ResearchVolunteerData = [
         {name: "/logos/1.svg"},
         {name: "/logos/2.svg"},
+        {name: "/logos/9.svg"},
+        {name: "/logos/10.svg"},
+        {name: "/logos/11.svg"},
+        {name: "/logos/12.svg"},
         {name: "/logos/3.svg"},
         {name: "/logos/4.svg"},
         {name: "/logos/5.svg"},
         {name: "/logos/6.svg"},
         {name: "/logos/7.svg"},
         {name: "/logos/8.svg"},
-        {name: "/logos/9.svg"},
-        {name: "/logos/10.svg"},
-        {name: "/logos/11.svg"},
-        {name: "/logos/12.svg"},
     ]
     
     
@@ -22,7 +23,7 @@ import ClientLogo from "../components/Others/ClientLogo.svelte";
         {id: 2, item: "Twitter", link: "www.twitter.com"},
         {id: 3, item: "Instagram",link: "www.instagram.com"},
         {id: 4, item: "Linkedin", link: "www.linkedin.com"},
-        {id: 5, item: "Tiktok", link: "www.tiktok.com"}
+        {id: 5, item: "Youtube", link: "www.youtube.com"}
     ];
     let date = new Date();
     let year = date.getFullYear()
@@ -30,24 +31,31 @@ import ClientLogo from "../components/Others/ClientLogo.svelte";
     let footerPoint = [
         {name: "Research Volunteer", url: "#research-volunteer"},
         {name: "Operational Volunteer", url: "#operational-volunteer"},
-        {name: "Sponsors/Partners", url: "#sponsors"}
+        {name: "Proud Sponsors", url: "#sponsors"},
+        {name: "Proud Partners", url: "#partners"}
     ];
     
 </script>
 
-<div class="w-full h-full flex mx-auto justify-apart" id="contact">
-	<div class="w-[20px] md:w-[150px] inline-block bg-blueDeep/60">
+<div class="w-full h-full flex flex-auto mx-auto justify-apart" id="contact">
+	<!-- <div class="w-[20px] md:w-[150px] inline-block bg-blueDeep/60">
 		<div class="rotate-90 scale-x-flip scale-y-flip sticky top-[50%] mt-[28rem] mb-10">
 			<h1 class="font-ibmplex font-bold text-[72px] text-white/70 invisible md:visible">CONTACT</h1>
 		</div>
 	</div>
-    
-    <div class="w-full flex flex-col mx-auto justify-center items-center text-center">
-        <div class="flex flex-wrap pt-20 justify-center items-center text-center gap-4 md:gap-0 md:space-x-8">
+     -->
+    <div class="w-full flex flex-col mx-auto justify-center items-center text-center mt-32">
+        <div class="">
+			<h1 class="font-hammersmith text-[24px] md:text-[45px] mb-8 leading-0">
+				Contact <span class="text-blueLight">- Join us.</span> Let's build Together.
+			</h1>
+		</div>
+        
+        <div class="flex flex-wrap justify-center items-center text-center gap-4 ">
             {#each footerPoint as point}
-            <div class="bg-white shadow-lg rounded-[10px] text-blueDeep/70 text-sm font-normal mx-auto px-4 py-3 border border-green hvr-shutter-out-horizontal cursor-pointer">
-                <a href={point.url}>{point.name}</a>
-            </div>
+            <a class="w-4/5 md:w-[180px] bg-white shadow-lg rounded-[10px] text-blueDeep/70 text-sm font-normal mx-auto px-4 py-3 border border-green hvr-shutter-out-horizontal cursor-pointer" href={point.url} class:active="{$page.url.hash === point.url}">
+                <span >{point.name}</span>
+            </a>
             {/each}
         </div>
         <ClientLogo logos={ResearchVolunteerData} />
@@ -67,7 +75,7 @@ import ClientLogo from "../components/Others/ClientLogo.svelte";
                  <a rel="external" href={menu.link} target="_blank" class="hover:text-green">{menu.item}</a>
                 {/each}
              </div>
-            <p class="font-light text-[14px] my-4">Copyright &copy; {year} <span class="font-semibold">Substainable</span>Rivers. All rights reserved.</p>
+            <p class="font-light text-[14px] my-4">&copy; {year} The <span class="font-semibold">Substainable</span>Rivers Initiative. All rights reserved.</p>
         </div>
     </div>
 </div>
@@ -78,4 +86,9 @@ import ClientLogo from "../components/Others/ClientLogo.svelte";
       background: #7ED957;
       border-radius: 10px;
     }
- </style>
+a.active {
+  background: #7ED957;
+  color:#ffffff
+}
+
+</style>

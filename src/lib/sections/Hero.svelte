@@ -34,12 +34,16 @@
 <div class="w-full h-[650px] bg-[url('/hero.png')] bg-cover mt-20">
 	<div class="w-full flex flex-col h-[650px] bg-blueDeep/60 absolute mx-auto justify-center">
 		<div class="justify-center items-center text-center mt-24">
+			<div class="svc">
+				<p class="text-white text-lg md:text-xl -mb-4 md:-mb-6 -ml-[12rem] md:-ml-[22rem] font-light">The</p>
 			<h1 class="font-ibmplex font-bold text-white text-[38px] md:text-[75px]">
 				Sustainable<span class="font-light">RIVERS</span>
 			</h1>
+			<p class="text-white text-lg md:text-xl -mt-2 md:-mt-4 ml-[12rem] md:ml-[28rem] font-light">Initiative</p>
+			</div>
 			<span class="">
 				<ul
-					class="flex flex-col md:flex-row my-4 gap-x-4 text-2xl md:text-[25px] font-hammersmith text-white font-normal justify-center items-center text-center"
+					class="flex /flex-col md:flex-row py-8 gap-x-4 text-xl md:text-2xl md:text-[25px] font-hammersmith text-white font-normal justify-center items-center text-center"
 				>
 					<li>Yesterday</li>
 					<li class="border-x-4 px-4 border-spacing-2 border-yellow">Today</li>
