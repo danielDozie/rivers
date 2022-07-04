@@ -24,7 +24,7 @@
 				placeholder="Your Comment"
 				class="h-24 py-2 px-4 bg-blueDeep/10 rounded-[5px] resize"
 			/>
-			<button class="w-1/2 py-2 px-4 bg-green mt-6 rounded-[10px] text-white mx-auto hvr-float">COMMENT/JOIN US</button>
+			<button class="w-1/2 py-2 px-4 bg-green mt-6 rounded-[10px] text-white mx-auto hvr-float">COMMENT</button>
 			<p class="mx-auto text-[10px] text-blueDeep/80 cursor-pointer" on:click={toggleForm}>Cancel</p>
 		</div>
 	</div>

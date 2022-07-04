@@ -15,15 +15,15 @@
 	<link rel="icon" href="./subRiverLogo.svg" />
 </svelte:head>
 
-<div class="w-full h-[80px] md:h-[100px] bg-white md:inline-block fixed z-50 top-0">
+<div class="w-full h-[80px] md:h-[100px] bg-blueLight md:inline-block fixed z-50 top-0">
 	<div class="hidden md:flex mx-auto pt-8 px-16 justify-between">
 		<a href="/"><img src="/subRiverLogo.svg" alt="" class="w-[40px] -mt-1" /></a>
 		<Menu />
 		<RegisterButton />
 	</div>
 	<!-- Mobile Menu -->
-	<div class="flex md:hidden mx-auto pt-4 justify-between px-4">
-		<a href="/"><img src="/subRiverLogo.svg" alt="" class="drop-shadow-sm w-8 mt-2" /></a>
+	<div class="flex md:hidden h-[80px] mx-auto pt-4 justify-between px-4">
+		<a href="/"><img src="/subRiverLogo.svg" alt="" class="drop-shadow-sm w-8 mt-1" /></a>
 		{#if $mobileMenuStore}
 		<MenuOpenIcon />
 		{:else}
@@ -32,9 +32,9 @@
 	</div>
 	<!-- Off canvas mobile menu -->
 	<div class={`${!$mobileMenuStore ? 'hidden' : 'flex'} w-full h-screen md:hidden bg-black/50 mx-auto relative`}>
-		<div class="w-3/5 h-full bg-white pt-6">
+		<div class="w-3/5 h-full bg-blueLight pt-6">
 			<div class="flex flex-col mx-auto px-12">
-				<h1 class="text-[24px] text-black/80">NAVIGATION</h1>
+				<h1 class="text-[24px] text-white">NAVIGATION</h1>
 				<Menu />
 				<RegisterButton/> 
 			</div>
