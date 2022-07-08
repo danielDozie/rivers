@@ -1,5 +1,5 @@
 <script>
-    import {readMoreStore} from '$lib/store.svelte';
+    import {readMoreStore} from '$lib/store';
     
     export const readmore = () => {
       readMoreStore.readMoreToggle(true)

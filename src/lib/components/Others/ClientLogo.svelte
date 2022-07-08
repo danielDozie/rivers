@@ -1,5 +1,5 @@
 <script>
-    import {clients} from "$lib/store.svelte"
+    import {clients} from "$lib/store"
     export let logos = $clients
 </script>
 

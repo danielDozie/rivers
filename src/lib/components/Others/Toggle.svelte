@@ -1,6 +1,6 @@
 <script context='module'>
 
-import {mobileMenuStore} from '$lib/store.svelte'
+import {mobileMenuStore} from '$lib/store'
 	
 export const toggleMenu = () => {
 		mobileMenuStore.menuToggle()

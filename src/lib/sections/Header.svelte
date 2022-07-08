@@ -2,7 +2,7 @@
 	import RegisterButton from '$lib/components/Button/RegisterButton.svelte';
 	import Menu from '$lib/components/Menu/Menu.svelte';
 	let siteTitle = 'SustainableRIVERS';
-	import {mobileMenuStore} from '$lib/store.svelte'
+	import {mobileMenuStore} from '$lib/store'
 	import MenuOpenIcon from '$lib/components/Others/MenuOpenIcon.svelte'
 	import MenuCloseIcon from '$lib/components/Others/MenuCloseIcon.svelte'
 </script>
