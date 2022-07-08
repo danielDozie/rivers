@@ -1,8 +1,9 @@
 import { databaseConnection } from '$lib/database.js';
+import APP from '$lib/variables';
 
 export async function get() {
     const connector = await databaseConnection
-    const database = await connector.db(process.env.DB);
+    const database = await connector.db(APP.DATABASE);
     const data = await database.collection('chatroom').find({}).toArray()
     
     try {
@@ -27,7 +28,7 @@ export async function get() {
 export async function post({request}) {
     const formBody = await request.json();
     const connector = await databaseConnection
-    const database = await connector.db(process.env.DB);
+    const database = await connector.db(APP.DATABASE);
     const data = await database.collection('chatroom').insertOne(formBody)
     
     if(data.acknowledged){

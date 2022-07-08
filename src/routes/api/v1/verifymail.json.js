@@ -1,9 +1,10 @@
 /* eslint-disable no-unused-vars */
 import { databaseConnection } from '$lib/database.js';
+import APP from '$lib/variables';
 
 export async function get(event) {
     const connector = await databaseConnection
-    const database = await connector.db(process.env.DB);
+    const database = await connector.db(APP.DATABASE);
     const data = await database.collection('chatroom').find({}).toArray()
     const requestHash = await event.url.searchParams.get('hash')
     const hashData = data.find(({ hash }) => hash === requestHash)
