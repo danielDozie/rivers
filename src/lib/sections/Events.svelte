@@ -35,7 +35,7 @@
         <div class="w-5/6 md:w-[80%] mx-auto my-12 md:my-16">
            <div class="flex flex-wrap gap-4 md:gap-8 justify-center items-center">
                {#each events as event}
-                <div class="w-[350px] md:w-[350px] h-[60px] md:h-[90px] bg-white rounded-[10px] myShutter hvr-shutter-out-horizontal justify-center text-center">
+                <div class="w-[350px] md:w-[350px] h-[75px] md:h-[90px] bg-white rounded-[10px] myShutter hvr-shutter-out-horizontal justify-center text-center">
                     <p class="text-center mt-3 md:mt-4 text-[20px] md:text-[30px]">{event.date}</p>
                     <span class="text-center text-[12px]">{event.day ? moment(event.day).format('dddd MMM YYYY') : event.notice}</span>
                 </div>

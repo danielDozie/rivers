@@ -31,7 +31,7 @@
 	];
 </script>
 
-<div class="w-full h-[650px] bg-[url('/hero.png')] bg-cover mt-20">
+<div class="w-full h-[650px] bg-[url('/heroFinal.jpg')] bg-cover mt-20">
 	<div class="w-full flex flex-col h-[650px] bg-blueDeep/60 absolute mx-auto justify-center">
 		<div class="justify-center items-center text-center mt-24">
 			<div class="svc">

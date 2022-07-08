@@ -1,6 +1,6 @@
 <script context="module">
 	export async function load({ fetch }) {
-		const url = '/chats';
+		const url = '/api/v1/chats.json';
 		const res = await fetch(url);
         const {data} = await res.json();
 		

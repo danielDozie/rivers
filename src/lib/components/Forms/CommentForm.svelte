@@ -35,9 +35,9 @@
 		data = {};
 	};
 	
-
+	
 	const verifyEmail = async () => {
-		const response = await fetch('/chats')
+		const response = await fetch('/api/v1/chats.json')
 		const result = await response.json()
 		const resultArray = result.data
 		
@@ -45,7 +45,7 @@
 			const emaildata = resultArray.filter(({email}) => email === $formEntries.email)
 			
 			if(emaildata && emaildata.verified !== true){
-				const sendmail = await fetch(`/sendmail.json?email=${$formEntries.email}&name=${$formEntries.name}&hash=${$formEntries.hash}&comment=${$formEntries.comment}`)
+				const sendmail = await fetch(`/api/v1/sendmail.json?email=${$formEntries.email}&name=${$formEntries.name}&hash=${$formEntries.hash}&comment=${$formEntries.comment}`)
 				const result = sendmail;
 				if(result.status === 200){
 					loading = false;
@@ -84,7 +84,7 @@
 		
 		loading = true;
 		setTimeout(async () => {
-			const res = await fetch('/chats', {
+			const res = await fetch('/api/v1/chats.json', {
 				method: 'POST',
 				headers: {
 					'content-type': 'application/json'
