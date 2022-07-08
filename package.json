@@ -1,6 +1,6 @@
 {
 	"name": "rivers",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
@@ -15,6 +15,7 @@
 		"@playwright/test": "^1.22.2",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
+		"@types/nodemailer": "^6.4.4",
 		"autoprefixer": "^10.4.7",
 		"eslint": "^8.16.0",
 		"eslint-config-prettier": "^8.3.0",
@@ -28,7 +29,12 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"dotenv": "^16.0.1",
 		"hover.css": "^2.3.2",
+		"md5": "^2.3.0",
+		"moment": "^2.29.4",
+		"mongodb": "^4.7.0",
+		"nodemailer": "^6.7.7",
 		"swiper": "^8.2.6"
 	}
 }

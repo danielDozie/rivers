@@ -1,5 +1,5 @@
 <script>
-        import {readMoreStore} from '$lib/store.svelte';
+        import {readMoreStore} from '$lib/store';
 </script>
 
 <div class="mt-16 mb-8 space-y-8">

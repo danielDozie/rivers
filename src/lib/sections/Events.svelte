@@ -1,14 +1,16 @@
 <script>
+    import moment from "moment"
     let events = [
-        {date: 'July 10 + 24'},
-        {date: 'August 7 + 21'},
-        {date: 'September 9 + 18'},
-        {date: 'October 9 + 23'},
-        {date: 'November 6 + 20'},
-        {date: 'December 4 + 11'},
-        {date: 'January (Final)'},
-        {date: '........'},
+        {date: 'July 10 + 24', day: '2022-07'},
+        {date: 'August 7 + 21', day: '2022-08'},
+        {date: 'September 9 + 18', day: '2022-09'},
+        {date: 'October 9 + 23', day: '2022-10'},
+        {date: 'November 6 + 20', day: '2022-11'},
+        {date: 'December 4 + 11', day: '2022-12'},
+        {date: 'January (Final)', notice: 'Grand Finale'},
+        {date: '........', notice: 'Watch out for upcoming dates'},
     ];
+
 </script>
 
 <div class="w-full h-full flex mx-auto bg-altYellow" id="schedule">
@@ -33,8 +35,9 @@
         <div class="w-5/6 md:w-[80%] mx-auto my-12 md:my-16">
            <div class="flex flex-wrap gap-4 md:gap-8 justify-center items-center">
                {#each events as event}
-                <div class="w-[350px] md:w-[350px] h-[60px] md:h-[80px] bg-white rounded-[10px] myShutter hvr-shutter-out-horizontal">
+                <div class="w-[350px] md:w-[350px] h-[60px] md:h-[90px] bg-white rounded-[10px] myShutter hvr-shutter-out-horizontal justify-center text-center">
                     <p class="text-center mt-3 md:mt-4 text-[20px] md:text-[30px]">{event.date}</p>
+                    <span class="text-center text-[12px]">{event.day ? moment(event.day).format('dddd MMM YYYY') : event.notice}</span>
                 </div>
                {/each}
            </div>

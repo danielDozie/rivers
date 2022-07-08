@@ -1,117 +1,45 @@
-
 <script context="module">
-	import CommentForm from '$lib/components/Forms/CommentForm.svelte';
-	import {formDialog} from '$lib/store.svelte'
-	
+	import {formDialog} from '$lib/store'
 	export const toggleForm = () =>{
 		formDialog.showForm();
 	}
-	
-	let colors = ['#f0eaff', '#ffe6f2','#d9f7ff', '#fff5de', '#ffe2ec','#e2fbed','#fffedd', '#e8f0ff'];
-	let length = colors.length;
-	let random  =  Math.floor(Math.random() * length);
-	let randomColor = colors[random];
-	let randomColor1 = "#f0eaff"
-	
-	 
-	let comments = [
-			{
-				name: 'Chidozie Danie',
-				email: 'placmedia@gmail.com',
-				comment:
-					'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et',
-				color: '#f0eaff'
-			},
-			{
-				name: 'Ariana Grande',
-				email: 'aryraymond@yahoo.com',
-				comment:
-					'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.',
-				color: '#ffe6f2',
-			},
-			{
-				name: 'John .K. Wike',
-				email: 'justice_wike@gmail.com',
-				comment:
-					'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.',
-				color: '#d9f7ff'
-			},
-			{
-				name: 'Ariana Grande',
-				email: 'aryraymond@yahoo.com',
-				comment:
-					'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.',
-				color: '#fff5de'
-			},
-			{
-				name: 'John .K. Wike',
-				email: 'justice_wike@gmail.com',
-				comment:
-					'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.',
-				color: '#ffe2ec'
-			},
-			{
-				name: 'Chidozie Danie',
-				email: 'placmedia@gmail.com',
-				comment:
-					'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et',
-				color: '#e2fbed'
-			},
-			{
-				name: 'Ariana Grande',
-				email: 'aryraymond@yahoo.com',
-				comment:
-					'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.',
-				color: '#fffedd'
-			},
-			{
-				name: 'John .K. Wike',
-				email: 'justice_wike@gmail.com',
-				comment:
-					'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.',
-				color: '#e8f0ff'
-			},
-			{
-				name: 'Ariana Grande',
-				email: 'aryraymond@yahoo.com',
-				comment:
-					'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.'
-			}
-		];
+</script>
 
+<script>
+	import { fade } from 'svelte/transition';
+	import CommentForm from '$lib/components/Forms/CommentForm.svelte';
+	import {commentData} from '$lib/store';
+	import moment from 'moment';
 
 </script>
 
 
 
 <div class="w-full h-full flex flex-auto mx-auto justify-apart bg-altBlue" id="chatroom">
-	<!-- <div class="w-[20px] md:w-[150px] md:inline-block bg-blueLighter">
-		<div class="rotate-90 scale-x-flip scale-y-flip sticky top-[50%] mt-[28rem] mb-20">
-			<h1 class="font-ibmplex font-bold text-[72px] text-white/70 invisible md:visible">CHATROOM</h1>
-		</div>
-	</div> -->
 	<div class="w-full flex flex-col mx-auto px-4 md:px-16 pb-20 justify-center mt-32">
 		<div class="">
 			<h1 class="font-hammersmith text-[24px] md:text-[45px] mb-8">
 				Chatroom <span class="text-blueLight">- Please Share</span> Your Ideas.
 			</h1>
 		</div>
-
-		
 		<div class="w-full mx-auto">
 			<div class="relative flex flex-col justify-center py-6 sm:py-12">
 				<div class="columns-1 md:columns-3 gap-x-4 space-y-4 [column-fill:_balance] box-border mx-auto before:box-inherit after:box-inherit">
-					  {#each comments as comment}
-						<div class="w-full break-inside-avoid font-light min-h-48 py-4 px-6 rounded-[10px] drop-shadow-md border-blueLight/60 hvr-float" style={`background-color: ${comment.color || '#ffffff'}`}>
+					  {#each $commentData as chat}
+					  	{#if chat.verified === true}
+						  <div class="w-full break-inside-avoid font-light min-h-48 py-4 px-6 rounded-[10px] drop-shadow-md border-blueLight/60 hvr-float" style={`background-color: ${chat.color ?'#'+chat.color : '#ffffff'}`}>
 							<div class="text-[14px] text-black/80">
-								<p class="font-[500]"><span class="font-[500]">Name ~ </span> {comment.name}</p>
-								<p><span class="font-[500]">Email ~ </span> {comment.email.replace(/^(.)(.*)(.@.*)$/,
+								<p class="font-[500] text-ellipsis text"><span class="font-[500]">Name ~ </span> {chat.name}</p>
+								<p><span class="font-[500]">Email ~ </span> {chat?.email?.replace(/^(.)(.*)(.@.*)$/,
 									(_, a, b, c) => a + b.replace(/./g, '*') + c
 							   )
 							   }</p>
-								<p><span class="font-[500]">Comment ~ </span> {comment.comment}</p>
+								<p class="text-ellipsis"><span class="font-[500]">Comment ~ </span> {chat.comment}</p>
 							</div>
+							<span class="font-[300] float-right text-[11px] text-blueLight">Added ~ {moment(chat.date_added).fromNow()}</span>
 						</div>
+						{/if}
+						
 					{/each}
 					  
 				  </div>
@@ -127,12 +55,10 @@
 				<CommentForm />
 			{/if}
 			<div class="flex justify-center pt-4 pb-20 ">
-				<button class={`${$formDialog ? "hidden" : ""} py-3 px-8 bg-blueLight mt-6 rounded-[10px] text-white hvr-sweep-to-right`}
-				on:click={toggleForm}>ADD COMMENT</button
+				<button in:fade class={`${$formDialog ? "hidden" : ""} py-3 px-8 bg-blueLight mt-6 rounded-[10px] text-white hvr-sweep-to-right`}
+				on:click={toggleForm} out:fade>ADD COMMENT</button
 						>
 			</div>
-
-			
 
 			<div class="text-[20px] md:text-[22px] pb-20">
 				<p class="font-hammersmith">Need more information?</p>

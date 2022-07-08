@@ -19,11 +19,11 @@ import ClientLogo from "../components/Others/ClientLogo.svelte";
     
     
     let menuItem = [
-        {id: 1, item: "Facebook", link: "www.facebook.com"},
-        {id: 2, item: "Twitter", link: "www.twitter.com"},
-        {id: 3, item: "Instagram",link: "www.instagram.com"},
-        {id: 4, item: "Linkedin", link: "www.linkedin.com"},
-        {id: 5, item: "Youtube", link: "www.youtube.com"}
+        {id: 1, item: "Facebook", link: "https://www.facebook.com"},
+        {id: 2, item: "Twitter", link: "https://www.twitter.com"},
+        {id: 3, item: "Instagram",link: "https://www.instagram.com"},
+        {id: 4, item: "Linkedin", link: "https://www.linkedin.com"},
+        {id: 5, item: "Youtube", link: "https://www.youtube.com"}
     ];
     let date = new Date();
     let year = date.getFullYear()
@@ -65,9 +65,14 @@ import ClientLogo from "../components/Others/ClientLogo.svelte";
         <img src="/subRiverLogo.svg" alt="footer logo" class="w-[60px] md:w-[80px] "/>
         <div class="w-5/6 md:w-3/5 mx-auto my-4 items-center text-center">
             <h1 class="font-ibmplex text-[26px] md:text-[32px] text-blueDeep/60"><b>Sustainable</b>Rivers</h1>
-            <p class="font-ibmplex text-[16px] md:text-[18px] font-light my-4"><span class="font-bold">Sustanable</span>Rivers initiative is a platform that seeks to understand the past, particularly as it lays foundation for what evolved into today; review the present against a series of developmental barometers; with an informed outlook into the future in economic, social, and political terms amongst others.</p>
+            <p class="font-ibmplex text-[16px] md:text-[18px] font-light my-4">The <span class="font-bold">Sustanable</span>RIVERS initiative is a platform that seeks to understand the past, particularly as it lays foundation for what has evolved into the present, and review the present against a series of developmental barometers, to articulate an informed outlook into the future in economic, social, development, and political terms amongst others.
+                
+                This agenda-setting non-partisan vehicle is designed to steer narrative towards people orientated inclusive growth, climate considerate fiscal interventions, investor focused sustainable development, and economy strengthening polity maturation.
+                
+                Rivers State founded in 1967, reshaped in 1996, has effectively existed for well over fifty years and as such by the turn of the current administrative cycle in 2023 deserves necessary opportunity to set itself on a long-term path of progressive statehood.
+            </p>
             
-            <a href="mailto:Info@sustainablerivers.org" id="email"><h1 class="font-ibmplex font-semibold text-[24px] md:text-[32px] mt-12 hover:opacity-70">info@sustainablerivers.org</h1></a>
+            <a href="mailto:Info@sustainablerivers.org" id="email"><h1 class="font-ibmplex font-semibold text-[24px] md:text-[32px] mt-12 hover:opacity-70"># info@sustainablerivers.org</h1></a>
             <div class="border-b-4 border-blueLighter w-40 md:w-60 mt-2 mx-auto" />
     
              <div class="font-semibold space-x-4 md:space-x-12 mx-auto mt-20 md:mt-24 pb-2 text-[13px] md:text-[14px">
