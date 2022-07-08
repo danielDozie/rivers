@@ -23,9 +23,9 @@ export async function get(event){
                 from: '"The Sustainable Rivers Initiative 👻" <verification@sustainablerivers.org>', // sender address
                 to: email, // recipient address, // list of receivers
                 subject: "Verify & publish your comment ✔", // Subject line
-                text: `Hi ${name}, Verify your email to have your comment published on the chatroom. Click on the verify link below to verify your email http://localhost:3000/verifymail?hash=${hash}`, // plain text body
+                text: `Hi ${name}, Verify your email to have your comment published on the chatroom. Click on the verify link below to verify your email https://sustainablerivers.org/verifymail?hash=${hash}`, // plain text body
                 html: `<div style="width: 90%;"><p>Hi ${name}, </p> <p>Verify your email to have your comment published on the chatroom. Click on the verify link below to confirm your email </p><br/>
-                <a href="http://localhost:3000/verifymail?hash=${hash}"><button style="background-color: #0E5792; color: #fff; padding: 5px 10px 5px 10px; border: none; cursor: pointer;">Verify & Publish</button></a> <br/>
+                <a href="https://sustainablerivers.org/verifymail?hash=${hash}"><button style="background-color: #0E5792; color: #fff; padding: 5px 10px 5px 10px; border: none; cursor: pointer;">Verify & Publish</button></a> <br/>
                 <br/>
                 <p><span style="font-weight:700;">Comment</span><br/>${comment}</p>
                 <hr style="width: 80%; float: left;" /><br/>
